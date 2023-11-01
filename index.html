@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .chart-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donut Chart</h1>
+    <div class="chart-container">
+        <canvas id="donutChart"></canvas>
+    </div>
+    <script>
+        // Load data from history.json
+        fetch('history.json')
+            .then(response => response.json())
+            .then(data => {
+                // Prepare data for Chart.js
+                const labels = [];
+                const dataValues = [];
+                for (const key in data) {
+                    const item = data[key].statistic;
+                    labels.push(key);
+                    dataValues.push(item.total);
+                }
+
+                // Create and render the donut chart
+                const ctx = document.getElementById('donutChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            data: dataValues,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                            ],
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        title: {
+                            display: true,
+                            text: 'Donut Chart',
+                        },
+                    },
+                });
+            })
+            .catch(error => console.error('Error loading data:', error));
+
+    </script>
+</body>
+</html>

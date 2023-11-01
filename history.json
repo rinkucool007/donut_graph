@@ -1,0 +1,114 @@
+{
+  "042fff92b004e7a3b04df3e06fbfdc86": {
+    "statistic": {
+      "failed": 5,
+      "broken": 0,
+      "skipped": 0,
+      "passed": 5,
+      "unknown": 0,
+      "total": 1
+    },
+    "items": [
+      {
+        "uid": "d15e18681f3308ae",
+        "status": "passed",
+        "time": {
+          "start": 1690218002124,
+          "stop": 1690218004042,
+          "duration": 1918
+        }
+      }
+    ]
+  },
+  "0d9c4a5c4f8d9247dca0860a55c0815e": {
+    "statistic": {
+      "failed": 0,
+      "broken": 0,
+      "skipped": 0,
+      "passed": 3,
+      "unknown": 0,
+      "total": 3
+    },
+    "items": [
+      {
+        "uid": "7c103985f5ae8217",
+        "status": "passed",
+        "time": {
+          "start": 1688591378644,
+          "stop": 1688591380255,
+          "duration": 1611
+        }
+      },
+      {
+        "uid": "5031abdd218fb7f4",
+        "status": "passed",
+        "time": {
+          "start": 1688591378644,
+          "stop": 1688591380255,
+          "duration": 1611
+        }
+      },
+      {
+        "uid": "37f3e9df7e66171d",
+        "status": "passed",
+        "time": {
+          "start": 1688591163728,
+          "stop": 1688591165379,
+          "duration": 1651
+        }
+      }
+    ]
+  },
+  "0d9cgdca0860a55c0815e": {
+    "statistic": {
+      "failed": 0,
+      "broken": 0,
+      "skipped": 0,
+      "passed": 3,
+      "unknown": 0,
+      "total": 3
+    },
+    "items": [
+      {
+        "uid": "7c5f5ae8217",
+        "status": "broken",
+        "statusDetails": "unknown error: unhandled inspector error: {\"code\":-3200,\"message\":\"No node with given id found\"}",
+        "time": {
+          "start": 1688591378644,
+          "stop": 1688591380255,
+          "duration": 1611
+        }
+      },
+      {
+        "uid": "5031a18fb7f4",
+        "status": "broken",
+        "statusDetails": "Error: function time out, ensure the promise resolve within 120000 millisecons",
+        "time": {
+          "start": 1688591378644,
+          "stop": 1688591380255,
+          "duration": 1611
+        }
+      },
+      {
+        "uid": "37f3e9df7e66171d",
+        "status": "broken",
+        "statusDetails": "Error: element (\"//span[text())",
+        "time": {
+          "start": 1688591163728,
+          "stop": 1688591165379,
+          "duration": 1651
+        }
+      },
+      {
+        "uid": "37f3e9df7e66171d",
+        "status": "broken",
+        "statusDetails": "Error: waiUntil condition timed out after 40000ms",
+        "time": {
+          "start": 1688591163728,
+          "stop": 1688591165379,
+          "duration": 1651
+        }
+      }      
+    ]
+  }  
+}
